@@ -1,0 +1,32 @@
+/* width */
+body.show::-webkit-scrollbar {
+    width: 12px;
+    display: auto;
+  }
+
+body.hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    padding-top: 250px;
+    display: auto;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--color1); 
+    padding-top: 250px;
+
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--color2); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
