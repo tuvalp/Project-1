@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="yati.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body class="show">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Admin</a>
+          
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" onclick="UI.ShowDiv('addItem')">Add Movie/Show</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="UI.ShowDiv('addEpisode')">Add Episode</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <span class="model-close">X</span>
+        <div class="container mt-3">
+            
+            <div class="admin-model" id="addItem" style="display: none;">
+                <div class="content">
+                    <h1 class="display-4 text-center">Add Movie/Show</h1>
+                    <form id="items-add">
+                        <div class="form-group">
+                            <label for="type">Type</label>
+                            <select id="type" class="form-control">
+                                <option value="movie">Movie</option>
+                                <option value="show">Show</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea id="description" class="form-control" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <input type="text" id="Year" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Time</label>
+                            <input type="text" id="Time" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="genre">genre</label>
+                            <input type="text" id="genre" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="frontimg">Front img</label>
+                            <input type="text" id="frontImg" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="backImg">Back Img</label>
+                            <input type="text" id="backImg" class="form-control">
+                        </div>
+                        <input type="submit" value="Add" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+            </div>
+
+            <div class="admin-model" id="editItem" style="display: none;">
+                <div class="content">
+                    <h1 class="display-4 text-center">Edit Movie/Show</h1>
+                    <form id="items-edit">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" id="Etitle" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea id="Edescription" class="form-control" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <input type="text" id="EYear" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Time</label>
+                            <input type="text" id="ETime" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="genre">genre</label>
+                            <input type="text" id="Egenre" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="frontimg">Front img</label>
+                            <input type="text" id="EfrontImg" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="backImg">Back Img</label>
+                            <input type="text" id="EbackImg" class="form-control">
+                        </div>
+                        <input type="submit" value="Save" class="btn btn-primary btn-block">
+                    </form>
+                </div> 
+            </div>
+
+            <div id="addEpisode" style="display: none;">
+                <h1 class="display-4 text-center">Add Episode</h1>
+                <form id="episode-add">
+                    <div class="form-group">
+                        <label for="item">Show</label>
+                        <select id="AEitemId"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="season">Season</label>
+                        <input type="text" id="AEseason" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="AEtitle" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <input type="text" id="AEtime" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="text" id="AEdate" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="frontImg">Front Img</label>
+                        <input type="text" id="AEfrontImg" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="backImg">Back Img</label>
+                        <input type="text" id="AEbackImg" class="form-control">
+                    </div>
+                    <input type="submit" value="Add" class="btn btn-primary btn-block">
+                </form>
+            </div>
+            <span class="mr-3">Movies / Shows</span>
+            <button type="button" class="btn btn-primary align-right">Add Movie/Show</button>
+            <table class="table table-striped mt-1">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Title</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody id="items-list"></tbody>
+            </table>
+        </div>
+
+    <script src="../js/main.js"></script>
+    <script src="admin.js"></script>
+    </body>
+</html>
