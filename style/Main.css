@@ -1,0 +1,203 @@
+:root {
+    --color0: #060606;
+    --color1: #101010;
+    --color2: #4E4E50;
+    --color3: ;
+    --color4: ;
+    --color5: ;
+}
+
+body {
+    background-color: var(--color0);
+    font-family: 'Nunito', sans-serif;
+    color: #FFFFFF;
+}
+
+.main {
+    margin-top: 300px;
+    margin-left: 70px;
+}
+
+.itemFront { 
+    width: 200px; 
+    height: 295px; 
+    margin: 0 10px 5px 0; 
+    float: left;
+    background: #111111 url("../images/icons/play.png") no-repeat 38px 81px;
+    border-radius: 15px;
+}
+.itemFront img {width: 200px; height: 295px; border-radius: 15px;}
+.itemFront img:hover {opacity: 0.5;}
+.itemFront .active {opacity: 0.5;}
+
+.model {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.model .moreInfo {
+    position: relative;
+    top: 20%;
+    width: 60%;
+    text-align: left;
+    margin-top: 30px;
+    margin: auto;
+}
+
+.moreInfo .buttons {
+    margin-top: 100px;
+}
+
+.moreInfo button {
+    border: none;
+    box-sizing: unset;
+    background: var(--color5);
+    color: var(--color1);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 15px;
+    outline: none;
+}
+
+.moreInfo button i { vertical-align: -5px; margin: 0; padding: 0;}
+.moreInfo button:hover {background: var(--color4);}
+
+.model .episodes {
+    position: relative;
+    top: 20%;
+    width: 80%;
+    text-align: left;
+    margin-top: 30px;
+    margin: auto;
+}
+
+.episodes .title {
+    font-size: 44px;
+    font-weight: bold;
+    margin: 0 3px;
+}
+
+.episodes select {
+    background-color: #000000;
+    border: #cccccc 1px solid;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 4px;
+    outline: none;
+}
+
+.episodes .episodeFront {
+    position: relative; 
+    float: left; 
+    margin: 6px 6px 0 0;
+    width: 256px; 
+    height: 149px;
+    background-color: #111111;
+    border-radius: 20px;
+}
+.episodes .episodeFront img {width: 256px; height: 149px; border-radius: 20px;}
+.episodes .episodeFront:hover img{ opacity: 0.5;}
+
+.episodes .info {
+    position: absolute; 
+    bottom: 20px; 
+    width: 100%; 
+    height: 50px; 
+    background: rgb(50, 50, 50, 0.5); 
+    text-align: center;
+    color: #eeeeee;
+    font-size: 14px;
+} 
+
+.model .search {
+    position: relative;
+    top: 20%;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+    height: 80%;
+}
+
+.search .search-input {
+    background: #000000 url("../images/icons/search.png") no-repeat 3px 4px;
+    color: #eeeeee;
+    width: 80%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px; 
+    border: 2px solid var(--color3); 
+    margin-bottom: 12px; 
+    border-radius: 15px;
+    outline: none;
+}
+
+.search .result {
+    overflow-y: auto;
+    height: 80%;
+}
+
+
+.model .settings {
+    position: relative;
+    top: 20%;
+    width: 80%;
+    text-align: left;
+    margin-top: 30px;
+    margin: auto;
+}
+
+.settings h1 {font-size: 48px;}
+.settings label {font-weight: bold;}
+
+.settings select {
+    background: #000000;
+    color: #eeeeee;
+    width: 80%;
+    font-size: 16px;
+    padding: 4px;
+    border: 1px solid #FFFFFF; 
+    margin-bottom: 12px; 
+    border-radius: 15px;
+    outline: none;
+}
+
+
+.model .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+  }
+
+  .model #back {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+  }
+
+  .model #back i{
+    padding: 0;
+    margin: 0;
+  }
+
+
+  .model .close:hover {color: #ccc;}
